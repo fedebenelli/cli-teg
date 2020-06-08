@@ -31,7 +31,9 @@ This is a partialy cli-based game that mimics the playstyle of TEG/Risk.
 
 - All the objectives are stored as individual text files in the "objectives" folder with the naming `objectives_<countryname>.txt`, where each line represents an objective
 
-## Start phase
+## Rules
+
+### Start phase
 
 - Recieve the amount of players as a list of names.
 - Ask to each player the desired color (from a list of colors).
@@ -42,13 +44,13 @@ This is a partialy cli-based game that mimics the playstyle of TEG/Risk.
 	- Each player add a total of 3 armies on their units.
 	- Another round to add another 3 armies.
 
-## Hostility phase
+### Hostility phase
 
 - Each player can attack it's neighbour province.
 - When the attacks are over, the player can move their units between neighbour provinces.
 - If the player conquered a province he will get a country card.
 
-## Add phase
+### Add phase
 
 - Each player will add an amount of armies equal to 60% (rounded up) of the amount of conquered provinces.
 

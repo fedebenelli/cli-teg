@@ -8,6 +8,7 @@ This module checks the countries file and draws a map with each player's army
 """
 
 country = sys.argv[1]
+maps_folder = sys.argv[2]
 
 with open('countries.json') as f:
     data = json.loads(f.read())[country]
@@ -28,5 +29,5 @@ for province in data:
     units = data[province]['units']
     write_map(x,y,units,data[province]['owner'])
 
-img.save('temp_map.png')
+img.save(maps_folder+'temp_map.png')
 img.show()

@@ -11,6 +11,9 @@ with open('countries.json') as f:
 
 country = sys.argv[1]
 objectives_file = f'./objectives/objectives_{country}.txt'
+maps_folder = './maps/'
+first_add_units = 4
+
 
 def get_players():
     """
@@ -28,6 +31,7 @@ def get_players():
     while True:
         if available_colors == []:
             print('\n\n No more available colors!\n-------------')
+            return players
         
         # Get the player's name
         player = input("Insert the player's name: ")
@@ -67,6 +71,11 @@ def assing_countries(players_list, countries, country):
             province_list.pop(0)
     return players_list
 
+
+def update_countries_file(countries):
+    with open('countries.json','w') as w:
+        w.write(json.dumps(countries, indent=4, sort_keys=True))
+
 def start_values(players,country):
     """
     Checks the file with all the countries and, for the selected country and players dictionary, it will assing the corresponding color and unit number as 1
@@ -77,8 +86,9 @@ def start_values(players,country):
         for province in players[player]['provinces']:
             countries[country][province]['units'] = "1"
             countries[country][province]['owner'] = players[player]['color']
-    with open('countries.json','w') as w:
-        w.write(json.dumps(countries, indent=4, sort_keys=True))
+
+    update_countries_file(countries)
+    return countries
 
 def give_objetives(players):
     """
@@ -91,6 +101,38 @@ def give_objetives(players):
         players[player]['objective'] = objective
         objectives_list.remove(objective)
     return players
+
+def add_units(player, players, countries, max_amount):
+    amount = max_amount
+    while amount > 0:
+        province = input('Where do you want to add units?\n> ')
+
+        if province in players[player]['provinces']:
+            amount_toadd = int(float(input('How many units?\n> ')))
+            if amount_toadd <= amount:
+                amount -= amount_toadd
+                current_amount = int(countries[country][province]['units'])
+                current_amount += amount_toadd
+                countries[country][province]['units'] = str(current_amount)
+            else:
+                print('You can\'t add that amount of units! Try again!')
+        else:
+            print('You don\'t own that province! Try again!')
+    return countries
+
+def first_add(players, countries):
+    for player in players:
+        print(players[player]['provinces'])
+        print(f'Turno de {player}')
+        units = first_add_units 
+        countries = add_units(player, players, countries, units)
+    for player in players:
+        print(players[player]['provinces'])
+        print(f'Turno de {player}')
+        units = first_add_units
+        countries = add_units(player, players, countries, units)
+    update_countries_file(countries)
+    return countries
 
 #players = get_players()
 players = {
@@ -108,7 +150,10 @@ players = {
             },
         }
 
-players = assing_countries(players,countries,country)
-players = give_objetives(players)
-start_values(players,country)
-os.system(f'./map_editing.py {country}')
+players   = assing_countries(players,countries,country)
+players   = give_objetives(players)
+countries = start_values(players,country)
+countries = first_add(players,countries)
+
+os.system(f'./map_editing.py {country} {maps_folder}')
+
