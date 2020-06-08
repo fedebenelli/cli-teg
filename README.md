@@ -6,16 +6,30 @@ This is a partialy cli-based game that mimics the playstyle of TEG/Risk.
 
 ### Data storage
 
-The current status of the game is stored in the file `countries.json`, where each entry object is a country object with the attributes:
+- The current status of the game is stored in the file `countries.json`, where each entry object is a country object with the attributes:
 
 ```json
 "province"{
-	"x":<x position in the map>,
-	"y":<y position in the map>,
-	"owner":<color of the owner>,
-	"units":<number of units>
+	"x":"<x position in the map>",
+	"y":"<y position in the map>",
+	"owner":"<color of the owner>",
+	"units":"<number of units>"
 }
 ```
+
+- The players are stored as a dictionary like:
+
+```json
+"playername":{
+	"color":"<player's color'>",
+	"provinces":["<list of provinces>"],
+	"objective":"<player's objective>"
+}
+```
+
+- All the maps must be in `.png` format and stored in the "maps" folder, with the naming `countryname.png`
+
+- All the objectives are stored as individual text files in the "objectives" folder with the naming `objectives_<countryname>.txt`, where each line represents an objective
 
 ## Start phase
 
