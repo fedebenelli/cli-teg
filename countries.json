@@ -1,1 +1,297 @@
-{"argentina": {"jujuy": {"x": "390", "y": "30", "owner": "green", "number": "placeholder", "limits": ["salta"], "units": "1"}, "salta": {"x": "445", "y": "40", "owner": "yellow", "number": "placeholder", "limits": ["jujuy", "catamarca", "tucuman", "santiagodelestero", "chaco", "formosa"], "units": "1"}, "formosa": {"x": "530", "y": "85", "owner": "red", "number": "placeholder", "limits": ["salta", "chaco"], "units": "1"}, "catamarca": {"x": "357", "y": "100", "owner": "red", "number": "placeholder", "limits": ["salta", "tucuman", "santiagodelestero", "cordoba", "larioja"], "units": "1"}, "tucuman": {"x": "405", "y": "115", "owner": "red", "number": "placeholder", "limits": ["salta", "catamarca", "santiagodelestero"], "units": "1"}, "santiagodelestero": {"x": "440", "y": "110", "owner": "yellow", "number": "placeholder", "limits": ["salta", "tucuman", "catamarca", "cordoba", "santafe", "chaco"], "units": "1"}, "chaco": {"x": "490", "y": "110", "owner": "yellow", "number": "placeholder", "limits": ["santiagodelestero", "santafe", "corrientes", "formosa"], "units": "1"}, "corrientes": {"x": "550", "y": "150", "owner": "red", "number": "placeholder", "limits": ["chaco", "santafe", "entrerios", "misiones"], "units": "1"}, "misiones": {"x": "620", "y": "125", "owner": "green", "number": "placeholder", "limits": ["corrientes"], "units": "1"}, "larioja": {"x": "377", "y": "184", "owner": "yellow", "number": "placeholder", "limits": ["catamarca", "cordoba", "sanluis", "sanjuan"], "units": "1"}, "cordoba": {"x": "436", "y": "216", "owner": "yellow", "number": "placeholder", "limits": ["catamarca", "santiagodelestero", "santafe", "buenosaires", "lapampa", "sanluis", "larioja"], "units": "1"}, "santafe": {"x": "500", "y": "180", "owner": "red", "number": "placeholder", "limits": ["santiagodelestero", "resistencia", "chaco", "corrientes", "entrerios", "buenosaires", "cordoba"], "units": "1"}, "entrerios": {"x": "517", "y": "238", "owner": "yellow", "number": "placeholder", "limits": ["santafe", "corrientes", "buenosaires"], "units": "1"}, "sanjuan": {"x": "340", "y": "205", "owner": "green", "number": "placeholder", "limits": ["larioja", "sanluis", "mendoza"], "units": "1"}, "mendoza": {"x": "350", "y": "285", "owner": "red", "number": "placeholder", "limits": ["sanjuan", "sanluis", "lapampa", "neuquen"], "units": "1"}, "sanluis": {"x": "395", "y": "255", "owner": "red", "number": "placeholder", "limits": ["mendoza", "sanjuan", "larioja", "cordoba", "lapampa"], "units": "1"}, "lapampa": {"x": "405", "y": "345", "owner": "green", "number": "placeholder", "limits": ["mendoza", "sanluis", "cordoba", "buenosaires", "rionegro"], "units": "1"}, "buenosaires": {"x": "500", "y": "320", "owner": "green", "number": "placeholder", "limits": ["rionegro", "lapampa", "cordoba", "santafe", "entrerios"], "units": "1"}, "neuquen": {"x": "333", "y": "363", "owner": "green", "number": "placeholder", "limits": ["mendoza", "rionegro"], "units": "1"}, "rionegro": {"x": "375", "y": "410", "owner": "yellow", "number": "placeholder", "limits": ["neuquen", "lapampa", "buenosaires", "chubut"], "units": "1"}, "chubut": {"x": "350", "y": "485", "owner": "green", "number": "placeholder", "limits": ["rionegro", "santacruz"], "units": "1"}, "santacruz": {"x": "345", "y": "590", "owner": "green", "number": "placeholder", "limits": ["chubut", "tierradelfuego"], "units": "1"}, "tierradelfuego": {"x": "387", "y": "720", "owner": "red", "number": "placeholder", "limits": ["santacruz"], "units": "1"}}}
+{
+    "argentina": {
+        "buenosaires": {
+            "limits": [
+                "rionegro",
+                "lapampa",
+                "cordoba",
+                "santafe",
+                "entrerios"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "500",
+            "y": "320"
+        },
+        "catamarca": {
+            "limits": [
+                "salta",
+                "tucuman",
+                "santiagodelestero",
+                "cordoba",
+                "larioja"
+            ],
+            "number": "placeholder",
+            "owner": "yellow",
+            "units": "1",
+            "x": "357",
+            "y": "100"
+        },
+        "chaco": {
+            "limits": [
+                "santiagodelestero",
+                "santafe",
+                "corrientes",
+                "formosa"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "490",
+            "y": "110"
+        },
+        "chubut": {
+            "limits": [
+                "rionegro",
+                "santacruz"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "350",
+            "y": "485"
+        },
+        "cordoba": {
+            "limits": [
+                "catamarca",
+                "santiagodelestero",
+                "santafe",
+                "buenosaires",
+                "lapampa",
+                "sanluis",
+                "larioja"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "436",
+            "y": "216"
+        },
+        "corrientes": {
+            "limits": [
+                "chaco",
+                "santafe",
+                "entrerios",
+                "misiones"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "550",
+            "y": "150"
+        },
+        "entrerios": {
+            "limits": [
+                "santafe",
+                "corrientes",
+                "buenosaires"
+            ],
+            "number": "placeholder",
+            "owner": "yellow",
+            "units": "1",
+            "x": "517",
+            "y": "238"
+        },
+        "formosa": {
+            "limits": [
+                "salta",
+                "chaco"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "530",
+            "y": "85"
+        },
+        "jujuy": {
+            "limits": [
+                "salta"
+            ],
+            "number": "placeholder",
+            "owner": "yellow",
+            "units": "1",
+            "x": "390",
+            "y": "30"
+        },
+        "lapampa": {
+            "limits": [
+                "mendoza",
+                "sanluis",
+                "cordoba",
+                "buenosaires",
+                "rionegro"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "405",
+            "y": "345"
+        },
+        "larioja": {
+            "limits": [
+                "catamarca",
+                "cordoba",
+                "sanluis",
+                "sanjuan"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "377",
+            "y": "184"
+        },
+        "mendoza": {
+            "limits": [
+                "sanjuan",
+                "sanluis",
+                "lapampa",
+                "neuquen"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "350",
+            "y": "285"
+        },
+        "misiones": {
+            "limits": [
+                "corrientes"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "620",
+            "y": "125"
+        },
+        "neuquen": {
+            "limits": [
+                "mendoza",
+                "rionegro"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "333",
+            "y": "363"
+        },
+        "rionegro": {
+            "limits": [
+                "neuquen",
+                "lapampa",
+                "buenosaires",
+                "chubut"
+            ],
+            "number": "placeholder",
+            "owner": "yellow",
+            "units": "1",
+            "x": "375",
+            "y": "410"
+        },
+        "salta": {
+            "limits": [
+                "jujuy",
+                "catamarca",
+                "tucuman",
+                "santiagodelestero",
+                "chaco",
+                "formosa"
+            ],
+            "number": "placeholder",
+            "owner": "yellow",
+            "units": "1",
+            "x": "445",
+            "y": "40"
+        },
+        "sanjuan": {
+            "limits": [
+                "larioja",
+                "sanluis",
+                "mendoza"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "340",
+            "y": "205"
+        },
+        "sanluis": {
+            "limits": [
+                "mendoza",
+                "sanjuan",
+                "larioja",
+                "cordoba",
+                "lapampa"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "395",
+            "y": "255"
+        },
+        "santacruz": {
+            "limits": [
+                "chubut",
+                "tierradelfuego"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "345",
+            "y": "590"
+        },
+        "santafe": {
+            "limits": [
+                "santiagodelestero",
+                "resistencia",
+                "chaco",
+                "corrientes",
+                "entrerios",
+                "buenosaires",
+                "cordoba"
+            ],
+            "number": "placeholder",
+            "owner": "red",
+            "units": "1",
+            "x": "500",
+            "y": "180"
+        },
+        "santiagodelestero": {
+            "limits": [
+                "salta",
+                "tucuman",
+                "catamarca",
+                "cordoba",
+                "santafe",
+                "chaco"
+            ],
+            "number": "placeholder",
+            "owner": "green",
+            "units": "1",
+            "x": "440",
+            "y": "110"
+        },
+        "tierradelfuego": {
+            "limits": [
+                "santacruz"
+            ],
+            "number": "placeholder",
+            "owner": "yellow",
+            "units": "1",
+            "x": "387",
+            "y": "720"
+        },
+        "tucuman": {
+            "limits": [
+                "salta",
+                "catamarca",
+                "santiagodelestero"
+            ],
+            "number": "placeholder",
+            "owner": "yellow",
+            "units": "1",
+            "x": "405",
+            "y": "115"
+        }
+    }
+}

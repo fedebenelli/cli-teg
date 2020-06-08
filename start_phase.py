@@ -10,6 +10,7 @@ with open('countries.json') as f:
     countries = json.loads(f.read())
 
 country = sys.argv[1]
+objectives_file = f'./objectives/objectives_{country}.txt'
 
 def get_players():
     """
@@ -77,13 +78,13 @@ def start_values(players,country):
             countries[country][province]['units'] = "1"
             countries[country][province]['owner'] = players[player]['color']
     with open('countries.json','w') as w:
-        w.write(json.dumps(countries))
+        w.write(json.dumps(countries, indent=4, sort_keys=True))
 
 def give_objetives(players):
     """
     Cycles through each player and assings them an objective
     """
-    with open(f'objectives_{country}.txt') as f:
+    with open(objectives_file) as f:
         objectives_list = f.readlines()
     for player in players:
         objective = random.choice(objectives_list)
