@@ -2,6 +2,21 @@
 
 This is a partialy cli-based game that mimics the playstyle of TEG/Risk.  
 
+## Functionality
+
+### Data storage
+
+The current status of the game is stored in the file `countries.json`, where each entry object is a country object with the attributes:
+
+```json
+"province"{
+	"x":<x position in the map>,
+	"y":<y position in the map>,
+	"owner":<color of the owner>,
+	"units":<number of units>
+}
+```
+
 ## Start phase
 
 - Recieve the amount of players as a list of names.

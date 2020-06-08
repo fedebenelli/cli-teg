@@ -27,10 +27,13 @@ def get_players():
     while True:
         if available_colors == []:
             print('\n\n No more available colors!\n-------------')
+        
         # Get the player's name
         player = input("Insert the player's name: ")
+
         # Print the available colors
         print(f'\nAvailable colors: {available_colors}')
+
         # Get the chosen color
         color = input("\nInsert the player's color: ")
         
@@ -50,6 +53,9 @@ def get_players():
             return players
 
 def assing_countries(players_list, countries, country):
+    """
+    Makes a list of all the provinces, shuffles it and then it assings them to the players by cycling through the players
+    """
     province_list = [province for province in countries[country]]
     random.shuffle(province_list)
     while province_list != []:
@@ -61,6 +67,9 @@ def assing_countries(players_list, countries, country):
     return players_list
 
 def start_values(players,country):
+    """
+    Checks the file with all the countries and, for the selected country and players dictionary, it will assing the corresponding color and unit number as 1
+    """
     with open('countries.json') as f:
         countries = json.loads(f.read())
     for player in players:
@@ -71,6 +80,9 @@ def start_values(players,country):
         w.write(json.dumps(countries))
 
 def give_objetives(players):
+    """
+    Cycles through each player and assings them an objective
+    """
     with open(f'objectives_{country}.txt') as f:
         objectives_list = f.readlines()
     for player in players:
@@ -97,7 +109,5 @@ players = {
 
 players = assing_countries(players,countries,country)
 players = give_objetives(players)
-for player in players:
-    print(player, ': ',players[player]['objective'])
 start_values(players,country)
 os.system(f'./map_editing.py {country}')
